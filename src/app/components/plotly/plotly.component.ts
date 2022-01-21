@@ -15,29 +15,29 @@ export class PlotlyComponent implements OnInit {
     this.data = [{
       type: 'scattergeo',
       mode: 'markers',
-      locations: ['FRA', 'DEU', 'RUS', 'ESP'],
+      locations: ['FRA', 'DEU', 'RUS', 'ESP', 'PAK', 'USA', 'CAN', 'IND', 'AUS'],
       marker: {
-        size: [20, 30, 15, 10],
-        color: [10, 20, 40, 50],
+        size: [45, 65, 105, 55, 35, 105, 75, 10, 15],
+        color: [20, 28, 80, 30, 10, 80, 25, 0.5, 2],
         cmin: 0,
         cmax: 50,
-        colorscale: 'Greens',
+        colorscale: 'red',
         colorbar: {
-            title: 'Some rate',
+            title: 'Maximum Purchase',
             ticksuffix: '%',
-            showticksuffix: 'last'
+            showticksuffix: 'white'
         },
         line: {
-            color: 'black'
+            color: 'gray'
         }
       },
-      name: 'europe data'
+      name: 'MAX CHECKOUTS'
     }];
 
     this.layout = {
       'geo': {
-        'scope': 'europe',
-        'resolution': 50
+        'scope': 'world',
+        'resolution': 500
       }
     };
   }
